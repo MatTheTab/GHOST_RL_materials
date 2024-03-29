@@ -1,0 +1,27 @@
+[build-system]
+requires = ["setuptools"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "ghostrl"
+version = "0.1.0"
+
+[tool.setuptools]
+include-package-data = true
+
+[tool.setuptools.packages.find]
+include = ["ghostrl", "ghostrl.*"]
+
+[tool.setuptools.package-data]
+ghostrl = [
+    "img/*"
+]
+
+[tool.black]
+safe = true
+
+[tool.isort]
+atomic = true
+profile = "black"
+src_paths = ["ghostrl"]
+
